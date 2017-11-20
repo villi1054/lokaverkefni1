@@ -20,17 +20,16 @@ while val !=0:
     val = int(input("Hvað má bjóða þér að gera? Veldu númer úr valmynd. "))
     #Þá get ég farið að vinna í hvaða lið fyrir sig með if, elif else,
     if val == 1:
-        listi = []
-        for x in range(50):
-            listi.append(randint(5, 70))
-        teljari = 1
-        for i in listi:
-            teljari *= i
-        print("Margfeldi talnanna er "+ str(teljari))
-        print(max(listi))
-        print(min(listi))
-        print(listi)
-        print(sorted(listi))
+        fjoldi = int(input("Hvað eru margir skráðir í ferðina?: "))
+        if fjoldi > 4:
+            bilar = fjoldi // 5
+            if fjoldi % 5 != 0:
+                bilar = bilar + 1
+                sidasti_bill = fjoldi % 5
+            print("Fjöldi bíla sem þarf: " + str(bilar))
+            print("Fjöldi í síðasta bílnum: " + str(sidasti_bill))
+        else:
+            print("Því miður eru ekki nógu margir skráðir, hætt er við ferðina.")
     elif val == 2:
         print("Tölur sem að ganga upp í 7 en ekki 5 ▼▼▼▼")
         nl = []
