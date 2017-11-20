@@ -37,20 +37,25 @@ while val !=0:
             if heiltala != 0:
                 summa = 0
                 if heiltala > 0:
-                    for x in range(heiltala):
-                        summa += heiltala
-                        print(str(heiltala) + " + ", end="")
-                        heiltala -= 1
-                    print("= " + str(summa))
+                    for x in range(1, heiltala + 1):
+                        summa += x
+                        if x == heiltala:
+                            print(x, end="")
+                        else:
+                            print(str(x) + " + ", end="")
+                    print(" = " + str(summa))
         
                 if heiltala < 0:
                     for x in range(heiltala, 0, 1):
-                        summa += heiltala
-                        print("(" + str(heiltala) + ")" + " + ", end="")
-                        heiltala += 1
-                    print("= " + str(summa))
-                else:
-                    print("Takk fyrir að nota forritið mitt")
+                        summa += x
+                        if x == -1:
+                            print("(" + str(x) + ")", end="")
+                        else:
+                            print("(" + str(x) + ") + ", end="")
+                    print(" = " + str(summa))
+        # end of while
+        print()
+        print("Takk fyrir að nota forritið mitt")
     elif val == 3:
         print("Sláðu inn 10 orð og forritið finnur út allskonar um þau")
         listi = []
