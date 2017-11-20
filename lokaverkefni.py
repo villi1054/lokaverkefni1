@@ -31,12 +31,26 @@ while val !=0:
         else:
             print("Því miður eru ekki nógu margir skráðir, hætt er við ferðina.")
     elif val == 2:
-        print("Tölur sem að ganga upp í 7 en ekki 5 ▼▼▼▼")
-        nl = []
-        for x in range(1500, 2700):
-            if (x % 7 == 0) and (x % 5 == 0):
-                nl.append(str(x))
-        print(','.join(nl))
+        heiltala = 1
+        while heiltala != 0:
+            heiltala = int(input("Sláðu inn heiltölu: "))
+            if heiltala != 0:
+                summa = 0
+                if heiltala > 0:
+                    for x in range(heiltala):
+                        summa += heiltala
+                        print(str(heiltala) + " + ", end="")
+                        heiltala -= 1
+                    print("= " + str(summa))
+        
+                if heiltala < 0:
+                    for x in range(heiltala, 0, 1):
+                        summa += heiltala
+                        print("(" + str(heiltala) + ")" + " + ", end="")
+                        heiltala += 1
+                    print("= " + str(summa))
+                else:
+                    print("Takk fyrir að nota forritið mitt")
     elif val == 3:
         print("Sláðu inn 10 orð og forritið finnur út allskonar um þau")
         listi = []
