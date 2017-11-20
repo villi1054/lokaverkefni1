@@ -64,12 +64,8 @@ while val !=0:
         for item in listi1:
             if item in listi2:
                 print("Þetta orð er í báðum listum "+item)
+    
     elif val == 5:
-    elif val == 6:
-    elif val == 7:
-    elif val == 8:
-    elif val == 9:
-    elif val == 10:
         print("Takk fyrir að nota forritið mitt ")
         break
     else:
