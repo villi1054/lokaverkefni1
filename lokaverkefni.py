@@ -38,16 +38,43 @@ while val !=0:
                 nl.append(str(x))
         print(','.join(nl))
     elif val == 3:
-        print("Sláðu inn 10 orð og forritið finnur út allskonar um þau")
-        listi = []
-        lengd = 10
-        while len(listi) < lengd:
-            ord = input("Sláðu inn orð í listann þinn")
-            listi.append(ord)
-            listi4 = []
-            if len(ord) == 4:
-                listi4.insert(i, char)
-                print(listi4)
+from random import randint
+# Búa til lista af valmöguleikum
+t = ["Steinn", "Blað", "Skæri"]
+# assign a random play to the computer
+computer = t[randint(0, 2)]
+# set player to False
+player = False
+
+while player == False:
+    # set player to True
+    player = input("Steinn, Blað, Skæri, 'Hætta' til að hætta")
+    if player == computer:
+        print("Jafntefli!")
+    elif player == "Steinn":
+        teljari2 = 0
+        teljari2 += 1
+        if computer == "Blað":
+            print("Þú tapar", computer, "vinnur", player)
+        else:
+            print("Þú vinnur", player, "vinnur", computer)
+    elif player == "Blað":
+        if computer == "Skæri":
+            print("Þú tapar!", computer, "sker", player)
+        else:
+            print("Þú vinnur!", player, "vinnur", computer)
+    elif player == "Skæri":
+        if computer == "Steinn":
+            print("Þú tapar....", computer, "vinnur", player)
+        else:
+            print("Þú vinnur!", player, "sker", computer)
+    elif player == "Hætta":
+        print("Þú vannst "+ teljari2 +"oft")
+    else:
+        print("Villa í innslátti! Sláðu inn annaðhvort Skæri, Blað eða Steinn")
+    # player was set to True, but we want it to be False so the loop continues
+    player = False
+    computer = t[randint(0, 2)]
     elif val == 4:
         lengd1 = 7
         lengd2 = 6
