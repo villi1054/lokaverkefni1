@@ -23,9 +23,9 @@ while val !=0:
         fjoldi = int(input("Hvað eru margir skráðir í ferðina?: "))
         if fjoldi > 4:
             bilar = fjoldi // 5
+            sidasti_bill = fjoldi % 5
             if fjoldi % 5 != 0:
                 bilar = bilar + 1
-                sidasti_bill = fjoldi % 5
             print("Fjöldi bíla sem þarf: " + str(bilar))
             print("Fjöldi í síðasta bílnum: " + str(sidasti_bill))
         else:
