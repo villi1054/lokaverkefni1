@@ -39,7 +39,7 @@ while val !=0:
         print(','.join(nl))
     elif val == 3:
 from random import randint
-# Búa til lista af valmöguleikum
+# create a list of play options
 t = ["Steinn", "Blað", "Skæri"]
 # assign a random play to the computer
 computer = t[randint(0, 2)]
@@ -48,23 +48,32 @@ player = False
 
 while player == False:
     # set player to True
-    player = input("Steinn, Blað, Skæri, 'Hætta' til að hætta")
+    print("Reglurnar:")
+    print("Skæri vinnur blað")
+    print("Steinn vinnur skæri")
+    print("Blað vinnur steinn")
+    print("Sláðu inn 'Skæri', 'Blað', eða Steinn til að byrja")
+    print("1.Fyrir skæri")
+    print("2.Fyrir blað")
+    print("3.Fyrir stein")
+    print("4.Til að hætta")
+    player = input("Skæri, Blað, Steinn, Hætta")
     if player == computer:
         print("Jafntefli!")
     elif player == "Steinn":
         teljari2 = 0
         teljari2 += 1
         if computer == "Blað":
-            print("Þú tapar", computer, "vinnur", player)
+            print("Þú tapar!", computer, "vinnur", player)
         else:
-            print("Þú vinnur", player, "vinnur", computer)
+            print("Þú vinnur!", player, "vinnur", computer)
     elif player == "Blað":
         if computer == "Skæri":
             print("Þú tapar!", computer, "sker", player)
         else:
             print("Þú vinnur!", player, "vinnur", computer)
     elif player == "Skæri":
-        if computer == "Steinn":
+        if computer == "Steinn!":
             print("Þú tapar....", computer, "vinnur", player)
         else:
             print("Þú vinnur!", player, "sker", computer)
