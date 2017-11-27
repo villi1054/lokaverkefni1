@@ -126,6 +126,7 @@ while player == False:
     # player was set to True, but we want it to be False so the loop continues
     player = False
     computer = t[randint(0, 2)]
+    
     elif val == 4:
         texti = input("Sláðu inn texta: ")
         for i in texti:
@@ -151,6 +152,26 @@ while player == False:
         print("Hæsta talan er: " + str(haestaTala))
         print("Summa talnanna er: " + str(summaTalna))
         print("Meðaltal talnanna er: " + str(medalTal))
+        
+    elif val == 9
+        nafn = input("Hvað heitir notandinn? ")
+        kyn = input("Hvaða kyn ertu (KK/KVK)? ")
+        kg = int(input("Sláðu inn þyngd þína í kílóum: "))
+        haed = float(input("Sláðu inn hæð þína í metrum: "))
+        bmi = kg / (haed*haed)
+        if bmi <= 18.5:
+            print("BMI stuðull þinn er: " + format(bmi, ".2f"))
+            print("Þú ert í vannæringu " + nafn.capitalize())
+        if bmi > 18.5 and bmi < 25:
+            print("BMI stuðull þinn er: " + format(bmi, ".2f"))
+            print("Þú ert í kjörþyngd " + nafn.capitalize())
+        if bmi > 25 and bmi < 30:
+            print("BMI stuðull þinn er: " + format(bmi, ".2f"))
+            print("Þú ert í ofþyngd " + nafn.capitalize())
+        if bmi > 30:
+            print("BMI stuðull þinn er: " + format(bmi, ".2f"))
+            print("Þú ert í offitu " + nafn.capitalize())
+
     else:
         break
         print("Takk fyrir að nota forritið mitt! ")
