@@ -152,6 +152,39 @@ while player == False:
         print("Hæsta talan er: " + str(haestaTala))
         print("Summa talnanna er: " + str(summaTalna))
         print("Meðaltal talnanna er: " + str(medalTal))
+    elif val == 7:
+        import random
+        listi = []
+        numer = 0
+        numer += 1
+        kast = 0
+        for x in range(99):
+            roll1 = random.randint(1, 6)
+            roll2 = random.randint(1, 6)
+            print("Kast tenginur 1: ", roll1)
+            print("Kast teningur 2: ", roll2)
+            samtal = roll1+roll2
+            print("Samtals ", str(samtal))
+            numer += 1
+            print("Þetta verður sett í listann sem kast: ", numer)
+
+            listi.append(samtal)
+            print(listi)
+        print("Hérna er listinn þinn óraðaður.")
+        print(listi)
+        print("Hérna er listinn þinn raðaður.")
+        print(sorted(listi))
+        print("Summa listans")
+        summa = sum(listi)
+        print(sum(listi))
+        print("Meðaltal listans er.")
+        print( summa / numer)
+        print("Hversu oft 7 kom fyrir í lastanum.")
+        print(listi.count(7))
+        print("Hversu oft 3 kom fyrir í listanum.")
+        print(listi.count(3))
+        print("Hversu oft 12 kom fyrir í listanum.")
+        print(listi.count(12))
         
     elif val == 9
         nafn = input("Hvað heitir notandinn? ")
