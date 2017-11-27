@@ -127,25 +127,30 @@ while player == False:
     player = False
     computer = t[randint(0, 2)]
     elif val == 4:
-        lengd1 = 7
-        lengd2 = 6
-        listi1 = []
-        listi2 = []
-        while len(listi1) < lengd1:
-            inslattur = input("Sláðu inn 7 orð. ")
-            listi1.append(inslattur)
-            print(listi1)
-        while len(listi2) < lengd2:
-            inslattur1 = input("Sláðu inn 6 orð.")
-            listi2.append(inslattur1)
-            print(listi2)
-        for item in listi1:
-            if item in listi2:
-                print("Þetta orð er í báðum listum "+item)
+        texti = input("Sláðu inn texta: ")
+        for i in texti:
+            if i == "g" or i == "G" or i == "k" or i == "K" or i == "n" or i == "N" or i == "r" or i == "R":
+                print("<", end="")
+            else:
+                print(i, end="")
+        print()
+        mid = (len(texti)) // 2
+        print(texti[:mid].capitalize())
+        print(texti[mid:].capitalize())
     
     elif val == 5:
-        print("Takk fyrir að nota forritið mitt ")
-        break
+        listi = []
+        for x in range(7):
+           tolur = int(input("Sláðu inn tölu númer " + str(x+1) + ": "))
+           listi.append(tolur)
+        minnstaTala = min(listi)
+        haestaTala = max(listi)
+        summaTalna = sum(listi)
+        medalTal = format(sum(listi)/len(listi),".2f")
+        print("Minnsta talan er: " + str(minnstaTala))
+        print("Hæsta talan er: " + str(haestaTala))
+        print("Summa talnanna er: " + str(summaTalna))
+        print("Meðaltal talnanna er: " + str(medalTal))
     else:
         break
         print("Takk fyrir að nota forritið mitt! ")
