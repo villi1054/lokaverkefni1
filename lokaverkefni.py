@@ -236,8 +236,42 @@ while val !=0:
         print(listi.count(3))
         print("Hversu oft 12 kom fyrir í listanum.")
         print(listi.count(12))
+    elif val == 8:
+        print("Sláðu inn upplýsingar um byggingar í Reykjavík.")
+        hallgrimur = []
+        print("Sláðu inn upplýsingar um Hallgrímskirkju.")
+        hstaðsetning = input("Staðsetning: ")
+        harkitekt = input("Arkitet: ")
+        hbygging = int(input("Byggingarár: "))
+        hallgrimur.append(hstaðsetning)
+        hallgrimur.append(harkitekt)
+        hallgrimur.append(hbygging)
+        print(hallgrimur)
+        print("Sláðu inn upplýsingar um sundhöllina.")
+        sund= []
+        sstaðsetning = input("Staðsetning: ")
+        sarkitekt = input("Arkitet: ")
+        sbygging = int(input("Byggingarár: "))
+        sund.append(hstaðsetning)
+        sund.append(harkitekt)
+        sund.append(hbygging)
+        print(sund)
+        print("Sláðu inn upplýsingar um Heilsuverndarstöðina í Reykjavík.")
+        sjukrahus = []
+        sjukrastaðsetning = input("Staðsetning: ")
+        sjukraarkitekt = input("Arkitet: ")
+        sjukrabygging = int(input("Byggingarár: "))
+        sjukrahus.append(hstaðsetning)
+        sjukrahus.append(harkitekt)
+        sjukrahus.append(hbygging)
+        print(sjukrahus)
+
+
+print("Heilsuverndarstöðinn í Reykjavík")
+for 
+print(i, end="             ")
         
-    elif val == 9
+    elif val == 9:
         nafn = input("Hvað heitir notandinn? ")
         kyn = input("Hvaða kyn ertu (KK/KVK)? ")
         kg = int(input("Sláðu inn þyngd þína í kílóum: "))
