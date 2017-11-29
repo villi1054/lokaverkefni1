@@ -237,39 +237,33 @@ while val !=0:
         print("Hversu oft 12 kom fyrir í listanum.")
         print(listi.count(12))
     elif val == 8:
-        print("Sláðu inn upplýsingar um byggingar í Reykjavík.")
-        hallgrimur = []
-        print("Sláðu inn upplýsingar um Hallgrímskirkju.")
-        hstaðsetning = input("Staðsetning: ")
-        harkitekt = input("Arkitet: ")
-        hbygging = int(input("Byggingarár: "))
-        hallgrimur.append(hstaðsetning)
-        hallgrimur.append(harkitekt)
-        hallgrimur.append(hbygging)
-        print(hallgrimur)
-        print("Sláðu inn upplýsingar um sundhöllina.")
-        sund= []
-        sstaðsetning = input("Staðsetning: ")
-        sarkitekt = input("Arkitet: ")
-        sbygging = int(input("Byggingarár: "))
-        sund.append(hstaðsetning)
-        sund.append(harkitekt)
-        sund.append(hbygging)
-        print(sund)
-        print("Sláðu inn upplýsingar um Heilsuverndarstöðina í Reykjavík.")
-        sjukrahus = []
-        sjukrastaðsetning = input("Staðsetning: ")
-        sjukraarkitekt = input("Arkitet: ")
-        sjukrabygging = int(input("Byggingarár: "))
-        sjukrahus.append(hstaðsetning)
-        sjukrahus.append(harkitekt)
-        sjukrahus.append(hbygging)
-        print(sjukrahus)
+        allar_b = []
+svar = "j"
+print("Sláðu inn upplýsingar um byggingar í Reykjavík.")
+while svar != "n":
+    bygginga_listi = []
+    bygging = input("Sláðu inn nafn á byggingu: ")
+    print("Sláðu inn upplýsingar um", bygging)
+    staðsetning = input("Staðsetning: ")
+    arkitekt = input("Arkitet: ")
+    ar = int(input("Byggingarár: "))
+    bygginga_listi.append(bygging)
+    bygginga_listi.append(staðsetning)
+    bygginga_listi.append(arkitekt)
+    bygginga_listi.append(ar)
+    print(bygginga_listi)
+    allar_b.append((bygginga_listi))
+    svar = input("Villtu skrá fleyri bygginar? (j/n): ").lower()
 
+print(allar_b)
 
-print("Heilsuverndarstöðinn í Reykjavík")
-for 
-print(i, end="             ")
+for i in range(len(allar_b)):
+    print("Bygging: ", allar_b[i][0])
+    print("Staðsetning: ", allar_b[i][1])
+    print("arkitet: ", allar_b[i][2])
+    print("ár: ", allar_b[i][3])
+    print()
+
         
     elif val == 9:
         nafn = input("Hvað heitir notandinn? ")
