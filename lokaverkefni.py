@@ -250,7 +250,6 @@ while val != 0:
             print("Þetta verður sett í listann sem kast: ", numer)
             # setja summu kasts í lista
             listi.append(samtal)
-            print(listi)
         # prenta listann á mismunandi vegu
         print("Hérna er listinn þinn óraðaður.")
         print(listi)
